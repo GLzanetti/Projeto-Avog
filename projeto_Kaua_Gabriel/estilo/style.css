@@ -110,15 +110,3 @@ nav a:hover{
     max-width: 140vh;
 }
 
-footer{
-    width: 100%;
-    background-color: #010fe6;
-    text-align: center;
-    color: white;
-}
-
-footer p{
-    font: normal normal 1.1em Arial;
-    padding: 10px;
-}
-
