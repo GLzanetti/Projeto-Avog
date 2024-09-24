@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+/*cores
+#010FE6
+#1F3ABB
+#303791
+#333666
+#28293C
+#2B2B33
+*/
+
+header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #050a30;
+    height: 150px;
+}
+
+header h1{
+    font: bolder normal 2.5em Arial;
+    color: white;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+}
+
+nav {
+    font: normal normal 1.5em Arial;
+    display: flex;    
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    background-color: #1F31BB;
+    text-decoration: underline;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+main{
+    font: normal normal 1.1em Arial;
+    background-color: white;
+    justify-content: center;
+}
+main h1{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+body{
+    margin: auto;
+}
+.oncas img{
+    float: left;
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 45px;
+}
+.textooncas{
+    float: right;
+    justify-content: right;
+    width: 700px;
+    margin-bottom: 30px;
+}
+
+.pumas img{
+    float: left;
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+.textopumas{
+    float: right;
+    justify-content: right;
+    width: 700px;
+    margin-bottom: 30px;
+}
+.panteras img{
+    float: left;
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+.textopanteras{
+    float: right;
+    justify-content: right;
+    width: 700px;
+    margin-bottom: 30px;
+}
+.tigresas img{
+    float: left;
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+}
+.textotigresas{
+    float: right;
+    justify-content: right;
+    width: 700px;
+}
