@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilo/cadastro.css">
+    <title>Cadastro para AVOG</title>
+</head>
+<body>
+    <header>
+        <h1>AVOG - Associação de Voleibol Guarulhense</h1>
+        <nav>
+           <a href="../index.html">Início</a> |
+           <a href="times.html">Times</a> |
+           <a href="sobre.html">Sobre</a> |
+           <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <div class="box">
+            <aside class="login">
+                <form action="#">
+                    <div class="login">
+                        <label for="gmail">Gmail :</label>
+                        <input type="email" name="email" id="gmail" class="input">
+                    </div>
+                    <div class="login">
+                        <label for="senha">Senha :</label>
+                        <input type="password" name="Senha" id="senha" class="input">
+                    </div>
+                    <input type="button" value="Login" class="Login" onclick="logar()">
+                </form>
+            </aside>
+            <forms action="#" class="cadastroforms">
+                <div class="cadastro">
+                    <label for="nome">Nome :</label>
+                    <input type="text" name="nome" id="nome" class="input">
+                </div>
+                <div class="cadastro">
+                    <label for="datanascimento">Data de Nascimento :</label>
+                    <input type="date" name="Data" id="datanascimento" class="input">
+                </div>
+                <div class="cadastro">
+                    <label for="telefone">Telefone :</label>
+                    <input type="tel" name="telefone" id="telefone" class="input">
+                </div>
+                <div class="cadastro">
+                    <label for="cpf">CPF :</label>
+                    <input type="number" name="cpf" id="cpf" class="input">
+                </div>
+                <div class="cadastro">
+                    <label for="gmail">Email :</label>
+                    <input type="email" name="gmail" id="gmail" class="input">
+                </div>
+                <div class="cadastro">
+                    <label for="senha">Senha :</label>
+                    <input type="password" name="senha" id="senha" class="input">
+                </div>
+                <input type="button" value="Cadastrar" id="Cadastrar" class="Cadastrar" onclick="cadastrar()">
+            </forms>
+        </div>
+    </main>
+
+    <script>
+        function cadastrar(){
+            alert("Usuário cadastrado com sucesso!")
+        }
+
+        function logar(){
+            alert("Usuário logado com sucesso!")
+        }
+    </script>
+</body>
+</html>
