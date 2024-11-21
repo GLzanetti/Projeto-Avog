@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilo/login.css">
+    <title>Cadastro para AVOG</title>
+</head>
+<body>
+    <header>
+        <h1>AVOG - Associação de Voleibol Guarulhense</h1>
+        <nav>
+           <a href="../index.html">Início</a> |
+           <a href="times.html">Times</a> |
+           <a href="sobre.html">Sobre</a> |
+           <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <div class="box">
+            <aside class="login">
+                <form action="#" name="formlogin" method="post">
+                    <div class="login">
+                        <label for="email" id="labelEmail">Email :</label>
+                        <input type="email" name="email" id="email" class="input">
+                    </div>
+                    <div class="login">
+                        <label for="senha" id="labelSenha">Senha :</label>
+                        <input type="password" name="Senha" id="senha" class="input">
+                    </div>
+                    <input type="button" value="Login" class="Login" onclick="logar()">
+                </form>
+                <p><a href="cadastro.html">Cadastre-se</a></p>
+            </aside>
+        </div>
+    </main>
+
+    <script>
+        function logar(){
+            let enviar = true
+            let email = document.getElementById('email').value
+            let senha = document.getElementById('senha').value
+
+            if(email.length == 0 || email.indexOf("@")<0 || email.trim() == ''){
+                alert("Email inválido")
+                document.getElementById('labelEmail').style.color = "red"
+                document.getElementById('email').style.borderColor = "red"
+                enviar = false
+            }
+
+            if(senha.length < 8){
+                alert("Senha inválida")
+                document.getElementById('labelSenha').style.color = "red"
+                document.getElementById('senha').style.borderColor = "red"
+                enviar = false
+            }
+
+            if(enviar == true){
+                alert("Usuario logado com sucesso")
+            //    document.formlogin.submit()
+            }else {
+                alert("Por favor preencha todos os campos.")                
+            }
+
+        }
+    </script>
+</body>
+</html>

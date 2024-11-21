@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilo/cadastro.css">
+    <title>Cadastre-se</title>
+</head>
+<body>
+    <header>
+        <h1>AVOG - Associação de Voleibol Guarulhense</h1>
+        <nav>
+           <a href="../index.html">Início</a> |
+           <a href="times.html">Times</a> |
+           <a href="sobre.html">Sobre</a> |
+           <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <main>
+        <div class="box">
+            <forms action="#" name = "cadastroforms" method = "post" class="cadastroforms">
+                <div class="cadastro">
+                    <label for="nome" id="labelNome">Nome :</label>
+                    <input type="text" 
+                    name="nome" id="nome" class="input" oninput="rejectNumbers(this)">
+                </div>
+                <div class="cadastro">
+                    <label for="datanascimento" id="labelDataNasci">Data de Nascimento :</label>
+                    <input type="date" name="Data" id="datanascimento" class="input">
+                </div>
+                <div class="cadastro">
+                    <label for="telefone" id="labelTel">Telefone :</label>
+                    <input type="tel" name="telefone" id="telefone" class="input" maxlength="11">
+                </div>
+                <div class="cadastro">
+                    <label for="cpf" id="labelCpf">CPF :</label>
+                    <input type="number" name="cpf" id="cpf" class="input" maxlength="11">
+                </div>
+                <div class="cadastro">
+                    <label for="email" id="labelEmail">Email :</label>
+                    <input type="email" name="email" id="email" class="input">
+                </div>
+                <div class="cadastro">
+                    <label for="senha" id="labelSenha">Senha :</label>
+                    <input type="password" name="senha" id="senha" class="input" maxlength="10">
+                </div>
+                <div class="cadastro">
+                    <label for="confirmsenha" id="labelConfirmar">Confirmar Senha</label>
+                    <input type="password" name="confirmsenha" id="confirmsenha" class="input">
+                </div>
+                <input type="button" value="Cadastrar" id="Cadastrar" class="Cadastrar" onclick="cadastrar()">
+            </forms>
+        </div>
+    </main>
+
+    <script>
+        function rejectNumbers(input) {
+            input.value = input.value.replace(/[0-9]/g, '');
+        }
+
+        function cadastrar(){
+            let nome = document.getElementById ("nome").value 
+            let datanascimento = document.getElementById ("datanascimento").value
+            let telefone = document.getElementById ("telefone").value 
+            let cpf = document.getElementById ("cpf").value 
+            let email = document.getElementById ("email").value
+            let senha = document.getElementById ("senha").value
+            let confirmsenha = document.getElementById("confirmsenha").value
+            let enviar = true
+
+            if(nome.length <3 || nome.length == 0){
+                alert("Nome inválido")
+                document.getElementById("labelNome").style.color = "red"
+                document.getElementById("nome").style.borderColor = "red"
+                enviar = false
+            }
+
+            if(datanascimento.length <8 || datanascimento.length == 0){
+                alert("Data inexistente")
+                document.getElementById("labelDataNasci").style.color = "red"
+                document.getElementById("datanascimento").style.borderColor = "red"
+                enviar = false
+            }
+
+            if(telefone.length <11 || telefone.length == 0){
+                alert("telefone inválido")
+                document.getElementById("labelTel").style.color = "red"
+                document.getElementById("telefone").style.borderColor = "red"
+                enviar = false
+            }
+
+            if(cpf.length < 11 || cpf.length == 0){
+                alert("CPF inválido")
+                document.getElementById("labelCpf").style.color = "red"
+                document.getElementById("cpf").style.borderColor = "red"
+                enviar = false
+            }
+
+            if(email.length == 0 || email.indexOf("@")<0 || email.trim() == ''){
+                alert("Email inválido")
+                document.getElementById("labelEmail").style.color = "red"
+                document.getElementById("email").style.borderColor = "red"
+                enviar = false
+            }
+
+            if(senha.length < 8 || senha.length == 0){
+                alert("Senha inválida")
+                document.getElementById("labelSenha").style.color = "red"
+                document.getElementById("senha").style.borderColor = "red"
+                enviar = false
+            }
+
+            if(confirmsenha != senha || senha.length == 0){
+                alert("Senhas diferentes")
+                document.getElementById("labelConfirmar").style.color = "red"
+                document.getElementById("confirmsenha").style.borderColor = "red"
+                enviar = false
+            }
+
+            if(enviar == true){
+                alert("Usuário cadastrado com sucesso!")
+               // document.cadastroforms.submit()
+            } else{
+                alert("Preencha todos os campos corretamente")
+            }
+
+        }
+    </script>
+</body>
+</html>
