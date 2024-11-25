@@ -7,7 +7,7 @@
     //int    vidade= Integer.parseInt( request.getParameter("txtIdade"));
     String vemail= request.getParameter("txtEmail");
     String vsenha = request.getParameter("txtSenha");
-    Double vcpf = Double.parseDouble(request.getParameter("txtCpf");
+    Double vcpf = Double.parseDouble(request.getParameter("txtCpf"));
 
     //variaveis para o banco de dados
     String banco    = "avogbd" ;
@@ -42,5 +42,5 @@
 
     out.print("Dados gravados com sucesso!!!");
     out.print("<br><br>") ;
-    out.print("<a href='login.html'>Voltar</a>") ;
+    out.print("<a href='consulta.jsp'>Voltar</a>") ;
 %>

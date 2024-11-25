@@ -19,7 +19,7 @@
     <body>
         <%
             //variavel para acessar o banco de dados
-            String database   = "web" ;
+            String database   = "avogbd" ;
             String enderecoBD = "jdbc:mysql://localhost:3306/" + database ;
             String usuarioBD  = "root" ;
             String senhaBD    = "" ;
@@ -51,16 +51,16 @@
             {
                 out.print("<tr>") ;
                     out.print("<td>") ;
-                        out.print( dados.getString("codigo") ) ;
+                        out.print( dados.getString("cpf") ) ;
                     out.print("</td>") ;
 
                     out.print("<td>") ;
                         out.print( dados.getString("nome") ) ;                    
                     out.print("</td>") ;
 
-                    out.print("<td>") ;
-                        out.print( dados.getString("idade") ) ;
-                    out.print("</td>") ;
+                    //out.print("<td>") ;
+                    //    out.print( dados.getString("idade") ) ;
+                    //out.print("</td>") ;
 
                     out.print("<td>") ;
                         out.print( dados.getString("email") ) ;
@@ -73,9 +73,8 @@
             }
 
             out.print("</table>") ;
-
-
-            
+                                   
         %>
+        <a href="../index.html">Pagina Inicial</a>
     </body>
 </html>
