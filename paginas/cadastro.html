@@ -18,11 +18,10 @@
     </header>
     <main>
         <div class="box">
-            <forms action="grava.jsp" name = "cadastroforms" method = "post" class="cadastroforms">
+            <form action="grava.jsp" name = "cadastroforms" method = "post" class="cadastroforms">
                 <div class="cadastro">
                     <label for="nome" id="labelNome">Nome :</label>
-                    <input type="text" 
-                    name="nome" id="nome" class="input" oninput="rejectNumbers(this)">
+                    <input type="text" name="txtNome" id="nome" class="input" oninput="rejectNumbers(this)">
                 </div>
                 <div class="cadastro">
                     <label for="datanascimento" id="labelDataNasci">Data de Nascimento :</label>
@@ -34,11 +33,11 @@
                 </div>
                 <div class="cadastro">
                     <label for="cpf" id="labelCpf">CPF :</label>
-                    <input type="number" name="cpf" id="cpf" class="input" maxlength="11">
+                    <input type="number" name="txtCpf" id="cpf" class="input" maxlength="11">
                 </div>
                 <div class="cadastro">
                     <label for="email" id="labelEmail">Email :</label>
-                    <input type="email" name="email" id="email" class="input">
+                    <input type="email" name="txtEmail" id="email" class="input">
                 </div>
                 <div class="cadastro">
                     <label for="senha" id="labelSenha">Senha :</label>
@@ -46,10 +45,10 @@
                 </div>
                 <div class="cadastro">
                     <label for="confirmsenha" id="labelConfirmar">Confirmar Senha</label>
-                    <input type="password" name="confirmsenha" id="confirmsenha" class="input">
+                    <input type="password" name="txtSenha" id="confirmsenha" class="input">
                 </div>
                 <input type="button" value="Cadastrar" id="Cadastrar" class="Cadastrar" onclick="cadastrar()">
-            </forms>
+            </form>
         </div>
     </main>
 
@@ -118,8 +117,7 @@
             }
 
             if(enviar == true){
-                alert("Usuário cadastrado com sucesso!")
-               // document.cadastroforms.submit()
+               document.cadastroforms.submit()
             } else{
                 alert("Preencha todos os campos corretamente")
             }
