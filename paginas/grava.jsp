@@ -4,7 +4,8 @@
     //digitadas pelo usuário
 
     String vnome = request.getParameter("txtNome");
-    //int    vidade= Integer.parseInt( request.getParameter("txtIdade"));
+    int    vidade= Integer.parseInt( request.getParameter("txtIdade"));
+    String vtel = request.getParameter("txtTel");
     String vemail= request.getParameter("txtEmail");
     String vsenha = request.getParameter("txtSenha");
     Double vcpf = Double.parseDouble(request.getParameter("txtCpf"));
@@ -28,14 +29,14 @@
     conexao = DriverManager.getConnection(endereco, usuario, senha) ;
 
     //Cria a variavel sql como o comando INSERT
-    String sql = "INSERT INTO alunos (nome, cpf, email, senha) values (?,?,?,?)" ;
+    String sql = "INSERT INTO alunos (nome, cpf, idade, telefone, email, senha) values (?,?,?,?,?,?)" ;
 
     PreparedStatement stm = conexao.prepareStatement(sql) ;
     stm.setString( 1 , vnome) ;
-    //stm.setInt( 2 , vidade ) ;
-    stm.setDouble( 2, vcpf) ;
-    stm.setString( 3 , vemail ) ;
-    stm.setString( 4 , vsenha) ;
+    stm.setInt( 2 , vidade ) ;
+    stm.setDouble( 3, vcpf) ;
+    stm.setString( 4 , vemail ) ;
+    stm.setString( 5 , vsenha) ;
 
     stm.execute() ;
     stm.close() ;

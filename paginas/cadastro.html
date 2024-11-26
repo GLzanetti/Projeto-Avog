@@ -21,19 +21,19 @@
             <form action="grava.jsp" name = "cadastroforms" method = "post" class="cadastroforms">
                 <div class="cadastro">
                     <label for="nome" id="labelNome">Nome :</label>
-                    <input type="text" name="txtNome" id="nome" class="input" oninput="rejectNumbers(this)">
+                    <input type="text" name="txtNome" id="nome" class="input" oninput="rejeitarNumeros(this)">
                 </div>
                 <div class="cadastro">
                     <label for="datanascimento" id="labelDataNasci">Data de Nascimento :</label>
-                    <input type="date" name="Data" id="datanascimento" class="input">
+                    <input type="number" name="Data" id="datanascimento" class="input">
                 </div>
                 <div class="cadastro">
                     <label for="telefone" id="labelTel">Telefone :</label>
-                    <input type="tel" name="telefone" id="telefone" class="input" maxlength="11">
+                    <input type="text" name="txtTel" id="telefone" class="input" maxlength="11" oninput="somenteNumeros(this)">
                 </div>
                 <div class="cadastro">
                     <label for="cpf" id="labelCpf">CPF :</label>
-                    <input type="number" name="txtCpf" id="cpf" class="input" maxlength="11">
+                    <input type="number" name="txtCpf" id="cpf" class="input" maxlength="11" oninput="somenteNumeros(this)">
                 </div>
                 <div class="cadastro">
                     <label for="email" id="labelEmail">Email :</label>
@@ -53,8 +53,12 @@
     </main>
 
     <script>
-        function rejectNumbers(input) {
+        function rejeitarNumeros(input) {
             input.value = input.value.replace(/[0-9]/g, '');
+        }
+
+        function somenteNumeros(input) {
+            input.value = input.value.replace(/[^0-9]/g, '');
         }
 
         function cadastrar(){
