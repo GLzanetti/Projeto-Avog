@@ -85,7 +85,7 @@ main{
 }
 
 .input{
-    border: 2px solid #1F31BB;
+    border: 2px solid #050a30;
     display: block;
     padding: 5px;
     border-radius: 10px;
@@ -98,7 +98,7 @@ main{
     width: 220px;
     font: normal normal 1.2em Arial;
     text-shadow: 1px 1px 10px rgba(0, 255, 255, 0.359);
-   color: #ffffff;
+    color: #ffffff;
 }
 
 .Login{
@@ -120,12 +120,12 @@ p{
 p a{
     font: normal normal 1.3em Arial;
     text-decoration: none;
-    color: #1F31BB;
+    color: #0c22c9;
     transition: 0.3s;
 }
 
 p a:hover{
     text-decoration: underline;
-    color: #010FE6;
+    color: #0011ff;
     transition: 0.3s;
 }
