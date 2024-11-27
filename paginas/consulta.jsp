@@ -58,9 +58,13 @@
                         out.print( dados.getString("nome") ) ;                    
                     out.print("</td>") ;
 
-                    //out.print("<td>") ;
-                    //    out.print( dados.getString("idade") ) ;
-                    //out.print("</td>") ;
+                    out.print("<td>") ;
+                        out.print( dados.getString("idade") ) ;
+                    out.print("</td>") ;
+
+                    out.print("<td>") ;
+                        out.print( dados.getString("telefone") ) ;
+                    out.print("</td>") ;
 
                     out.print("<td>") ;
                         out.print( dados.getString("email") ) ;

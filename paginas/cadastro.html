@@ -24,16 +24,16 @@
                     <input type="text" name="txtNome" id="nome" class="input" oninput="rejeitarNumeros(this)">
                 </div>
                 <div class="cadastro">
-                    <label for="txtIdade" id="labelidade"> Idade :</label>
-                    <input type="number" name="txtIdade" id="Idade" class="input" maxlength="2">
+                    <label for="idade" id="labelidade"> Idade :</label>
+                    <input type="text" name="txtIdade" id="idade" class="input" maxlength="2" oninput="somenteNumeros(this)">
                 </div>
                 <div class="cadastro">
                     <label for="telefone" id="labelTel">Telefone :</label>
-                    <input type="text" name="txtTel" id="telefone" class="input" maxlength="11">
+                    <input type="text" name="txtTel" id="telefone" class="input" maxlength="11" oninput="somenteNumeros(this)">
                 </div>
                 <div class="cadastro">
                     <label for="cpf" id="labelCpf">CPF :</label>
-                    <input type="number" name="txtCpf" id="cpf" class="input" maxlength="11" oninput="somenteNumeros(this)">
+                    <input type="text" name="txtCpf" id="cpf" class="input" maxlength="11" oninput="somenteNumeros(this)">
                 </div>
                 <div class="cadastro">
                     <label for="email" id="labelEmail">Email :</label>
@@ -44,7 +44,7 @@
                     <input type="password" name="senha" id="senha" class="input" maxlength="10">
                 </div>
                 <div class="cadastro">
-                    <label for="confirmsenha" id="labelConfirmar">Confirmar Senha</label>
+                    <label for="confirmsenha" id="labelConfirmar">Confirmar Senha :</label>
                     <input type="password" name="txtSenha" id="confirmsenha" class="input">
                 </div>
                 <input type="button" value="Cadastrar" id="Cadastrar" class="Cadastrar" onclick="cadastrar()">
@@ -63,7 +63,7 @@
 
         function cadastrar(){
             let nome = document.getElementById ("nome").value 
-            let datanascimento = document.getElementById ("datanascimento").value
+            let idade = document.getElementById ("idade").value
             let telefone = document.getElementById ("telefone").value 
             let cpf = document.getElementById ("cpf").value 
             let email = document.getElementById ("email").value
@@ -78,10 +78,10 @@
                 enviar = false
             }
 
-            if(datanascimento.length <8 || datanascimento.length == 0){
-                alert("Data inexistente")
-                document.getElementById("labelDataNasci").style.color = "red"
-                document.getElementById("datanascimento").style.borderColor = "red"
+            if(idade.length == 0){
+                alert("Idade inválida")
+                document.getElementById("labelidade").style.color = "red"
+                document.getElementById("idade").style.borderColor = "red"
                 enviar = false
             }
 

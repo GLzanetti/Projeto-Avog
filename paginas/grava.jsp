@@ -33,10 +33,11 @@
 
     PreparedStatement stm = conexao.prepareStatement(sql) ;
     stm.setString( 1 , vnome) ;
-    stm.setInt( 2 , vidade ) ;
-    stm.setDouble( 3, vcpf) ;
-    stm.setString( 4 , vemail ) ;
-    stm.setString( 5 , vsenha) ;
+    stm.setDouble( 2 , vcpf) ;
+    stm.setInt( 3 , vidade ) ;
+    stm.setString( 4 , vtel) ;
+    stm.setString( 5 , vemail ) ;
+    stm.setString( 6 , vsenha) ;
 
     stm.execute() ;
     stm.close() ;
