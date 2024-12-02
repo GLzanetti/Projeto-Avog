@@ -1,4 +1,25 @@
-<%@page language="java" import="java.sql.*" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilo/gravados.css">
+    <title>Porjeto AVOG</title>
+</head>
+<body>
+    <header>
+        <h1>AVOG - Associação de Voleibol Guarulhense</h1>
+        <nav>
+           <a href="index.html">Início</a> |
+           <a href="paginas/times.html">Times</a> |
+           <a href="paginas/sobre.html">Sobre</a> |
+           <a href="paginas/login.html">Login</a> |
+           <a href='paginas/consulta.jsp'>Tabela</a> 
+        </nav>
+    </header>
+    <main>
+        <%@page language="java" import="java.sql.*" %>
 <%
     //cria as variaveis para armazenar as informações 
     //digitadas pelo usuário
@@ -42,8 +63,11 @@
     stm.execute() ;
     stm.close() ;
 
-    out.print("Dados gravados com sucesso!!!");
+    out.print("<p>Conta criada com sucesso!!!</p>");
     out.print("<br><br>") ;
-    out.print("<a href='consulta.jsp'>Tabela</a>") ;
+    out.print("<a href='consulta.jsp'>Tabela</a><br>") ;
     out.print("<a href='../index.html'>Pagina Inicial</a>") ;
 %>
+    </main>
+</body>
+</html>
