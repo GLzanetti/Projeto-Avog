@@ -14,8 +14,7 @@
            <a href="index.html">Início</a> |
            <a href="paginas/times.html">Times</a> |
            <a href="paginas/sobre.html">Sobre</a> |
-           <a href="paginas/login.html">Login</a> |
-           <a href='paginas/consulta.jsp'>Tabela</a> 
+           <a href="paginas/login.html">Login</a> 
         </nav>
     </header>
     <main>
@@ -63,9 +62,25 @@
     stm.execute() ;
     stm.close() ;
 
+    String sqlselect = "SELECT * FROM alunos WHERE email=? AND senha=? ";
+
+    // Cria o statement para executar o camando no banco
+    PreparedStatement stmvalidacao = conexao.prepareStatement( sqlselect );
+
+    stmvalidacao.setString(1, vemail) ;
+    stmvalidacao.setString(2, vsenha) ;
+
+    ResultSet dados =  stmvalidacao.executeQuery() ;
+
+    if(dados.next())
+    {
+       session.setAttribute( "usuario"  ,  dados.getString("nome")  ) ;
+       
+    }
+
     out.print("<p>Conta criada com sucesso!!!</p>");
     out.print("<br><br>") ;
-    out.print("<a href='consulta.jsp'>Tabela</a><br>") ;
+    out.print("<a href='consulta2.jsp'>Tabela</a><br>") ;
     out.print("<a href='../index.html'>Pagina Inicial</a>") ;
 %>
     </main>
