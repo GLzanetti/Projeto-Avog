@@ -1,11 +1,23 @@
 <%@page language="java" import="java.sql.*" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <link rel="stylesheet" href="../estilo/perfil.css">
+    <title>Perfil</title>
 </head>
 <body>
+    <header>
+        <h1>AVOG - Associação de Voleibol Guarulhense</h1>
+        <nav>
+           <a href="../index.html">Início</a> |
+           <a href="times.html">Times</a> |
+           <a href="sobre.html">Sobre</a> |
+           <a href="login.html">Login</a> 
+        </nav>
+    </header>
+    <main>
     <%
 
         if(session.getAttribute("usuario") == null )
@@ -17,7 +29,7 @@
         else 
         {
 
-        out.print( "Bem vindo(a) " + session.getAttribute("usuario") );
+        out.print("<p>Bem vindo(a) " + session.getAttribute("usuario") + "</p>");
 
         out.print( "<br>" );
         out.print( "<a href='logout.jsp'>Logout</a>" );
@@ -52,10 +64,6 @@
         {
             out.print( "<tr>" ) ;
                 out.print( "<td>" ) ;
-                out.print( dados.getString("cpf") ) ;
-                out.print( "</td>" ) ;
-
-                out.print( "<td>" ) ;
                 out.print( dados.getString("nome") ) ;
                 out.print( "</td>" ) ;
 
@@ -83,5 +91,6 @@
 
         }
     %>
+    </main>
 </body>
 </html>

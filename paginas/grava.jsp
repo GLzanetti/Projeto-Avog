@@ -18,7 +18,7 @@
         </nav>
     </header>
     <main>
-        <%@page language="java" import="java.sql.*" %>
+    <%@page language="java" import="java.sql.*" %>
 <%
     //cria as variaveis para armazenar as informações 
     //digitadas pelo usuário
@@ -80,7 +80,7 @@
 
     out.print("<p>Conta criada com sucesso!!!</p>");
     out.print("<br><br>") ;
-    out.print("<a href='consulta2.jsp'>Tabela</a><br>") ;
+    out.print("<a href='consulta2.jsp'>Perfil</a><br>") ;
     out.print("<a href='../index.html'>Pagina Inicial</a>") ;
 %>
     </main>
